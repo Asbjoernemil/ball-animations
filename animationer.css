@@ -261,6 +261,7 @@
         top: 75%;
         animation-timing-function: ease-out;
         left: 50%;
+        transform: rotate(360deg);
     }
     100% {
         top: 75%;

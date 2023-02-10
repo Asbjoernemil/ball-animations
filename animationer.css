@@ -1,0 +1,294 @@
+/* Animation 1: Falling
+   Bolden falder konstant fra oven. */
+.falling {
+    animation-name: falling;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translate(0,-300%);
+    }
+
+    100% {
+        transform: translate(0,300%);
+    }
+    
+}
+
+.bouncing {
+    animation-name: bouncing;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bouncing {
+    0% { transform:translate(0, -100%); }
+    50% { transform:translate(0, 100%); }
+    100% { transform:translate(0, -100%); }
+}
+
+.drop {
+    animation-name: drop;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes drop {
+    0% { transform:translate(0, -300%); }
+    25% { transform:translate(0, 100%); }
+    50% { transform:translate(0, 100%); }
+    75% { transform:translate(0, 100%); }
+    100% { transform:translate(0, 100%); }
+}
+
+.pattern {
+    animation-name: pattern;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pattern {
+    0% { transform: translate(0, -150%);}
+    25% { transform: translate(150%, 0);}
+    50% { transform: translate(0, 150%);}
+    75% { transform: translate(-150%, 0);}
+    100% { transform: translate(0, -150%);}
+}
+
+.zoom_out {
+    animation-name: zoom_out;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom_out {
+    from { transform: scale(1);}
+    to { transform: scale(0);}
+}
+
+.zoom_in {
+    animation-name: zoom_in;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom_in {
+    from { transform: scale(0);}
+    to { transform: scale(10);}
+}
+
+.fade_out {
+    animation-name: fade_out;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade_out {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+.fade_in {
+    animation-name: fade_in;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade_in {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.rotation {
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    100% {transform: rotate(360deg);}
+}
+
+.rotation2 {
+    animation-name: rotation2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation2 {
+    0% {
+        transform-origin: 0 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: rotate(360deg);
+    }
+
+}
+
+.glow {
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 0 blue);
+    }
+    to {
+        filter: drop-shadow(0 0 20px blue);
+    }
+}
+
+.blur_to_gray {
+    animation-name: blur_to_gray;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blur_to_gray {
+    0% { 
+        transform: translate(-150%, 0)
+        rotate(0deg);
+    }
+    25% { 
+        transform: translate(-75%, 0)
+        rotate(90deg);
+        filter: grayscale(0.25);
+    }
+    50%{
+        transform: translate(0,0)
+        rotate(180deg);
+        filter: grayscale(0.5) blur(1px);
+    }
+    75%{
+        transform: translate(75%,0)
+        rotate(270deg);
+        filter: grayscale(1) blur(2px);
+    }
+    100%{
+        transform: translate(150%,0)
+        rotate(360deg);
+        filter: grayscale(1) blur(4px);
+    }
+} 
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1);}
+    to { transform: scale(1.1);}
+}
+
+.overshoot {
+    animation-name: overshoot;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0,-0.02,.72,1.8);
+    animation-iteration-count: infinite;
+}
+
+@keyframes overshoot {
+    0%{transform: translate(-150%, 0);}
+    60%{transform: translate(150%,0);}
+    100%{transform: translate(150%,0);}
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0%; 
+        left: 0%;
+        animation-timing-function: ease-in;
+    }
+    40% {
+        top: 75%;
+        animation-timing-function: ease-out;
+    }
+    60% {
+        top:25%;
+        animation-timing-function: ease-in;
+    }
+    70% {
+        top: 75%;
+        animation-timing-function: ease-out;
+    }
+    80% {
+        top: 50%;
+        animation-timing-function: ease-in;
+    }
+    85% {
+        top: 75%;
+        animation-timing-function: ease-out;
+    }
+    87% {
+        top: 65%;
+        animation-timing-function: ease-in;
+    }
+    89% {
+        top: 75%;
+        animation-timing-function: ease-out;
+    }
+    90% {
+        top: 75%;
+        animation-timing-function: ease-out;
+        left: 50%;
+    }
+    100% {
+        top: 75%;
+        animation-timing-function: ease-out;
+        left: 50%;
+        transform: rotate(360deg);
+    }
+}
+
+.squash {
+    animation-name: squash;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes squash {
+    0% { transform: translate(0, -150%);}
+    1% {transform: translate(0, -150%) scale(0.8,1.2);}
+    2% {transform: translate(0, -150%) scale(1.2,0.8);}
+    25% { transform: translate(150%, 0);}
+    26% {transform: translate(150%, 0) scale(1.2,0.8);}
+    27% {transform: translate(150%, 0) scale(0.8,1.2);}
+    50% { transform: translate(0, 150%);}
+    51% {transform: translate(0, 150%) scale(0.8,1.2);}
+    52% {transform: translate(0, 150%) scale(1.2,0.8);}
+    75% { transform: translate(-150%, 0);}
+    76% {transform: translate(-150%, 0) scale(1.2,0.8);}
+    77% {transform: translate(-150%, 0) scale(0.8,1.2);}
+    100% { transform: translate(0, -150%);}
+}

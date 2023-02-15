@@ -26,9 +26,8 @@
 }
 
 @keyframes bouncing {
-    0% { transform:translate(0, -100%); }
-    50% { transform:translate(0, 100%); }
-    100% { transform:translate(0, -100%); }
+    0%, 100% { transform:translate(0, -100%); }
+    50% { transform:translate(0, 135%); }
 }
 
 .drop {
@@ -40,10 +39,8 @@
 
 @keyframes drop {
     0% { transform:translate(0, -300%); }
-    25% { transform:translate(0, 100%); }
-    50% { transform:translate(0, 100%); }
-    75% { transform:translate(0, 100%); }
-    100% { transform:translate(0, 100%); }
+    25% { transform:translate(0, 135%); }
+    100% { transform:translate(0, 135%); }
 }
 
 .pattern {
@@ -54,11 +51,11 @@
 }
 
 @keyframes pattern {
-    0% { transform: translate(0, -150%);}
+    0% { transform: translate(0, -140%);}
     25% { transform: translate(150%, 0);}
-    50% { transform: translate(0, 150%);}
+    50% { transform: translate(0, 140%);}
     75% { transform: translate(-150%, 0);}
-    100% { transform: translate(0, -150%);}
+    100% { transform: translate(0, -140%);}
 }
 
 .zoom_out {
@@ -125,15 +122,16 @@
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    translate: 50% -125%;
 }
 
 @keyframes rotation2 {
     0% {
-        transform-origin: 0 0;
+        transform-origin: 0 175%;
         transform: rotate(0deg);
     }
     100% {
-        transform-origin: 0 0;
+        transform-origin: 0 175%;
         transform: rotate(360deg);
     }
 
@@ -229,7 +227,7 @@
         left: 0%;
         animation-timing-function: ease-in;
     }
-    40% {
+    40%, 70%, 85%, 89% {
         top: 75%;
         animation-timing-function: ease-out;
     }
@@ -237,25 +235,13 @@
         top:25%;
         animation-timing-function: ease-in;
     }
-    70% {
-        top: 75%;
-        animation-timing-function: ease-out;
-    }
     80% {
         top: 50%;
         animation-timing-function: ease-in;
     }
-    85% {
-        top: 75%;
-        animation-timing-function: ease-out;
-    }
     87% {
         top: 65%;
         animation-timing-function: ease-in;
-    }
-    89% {
-        top: 75%;
-        animation-timing-function: ease-out;
     }
     90% {
         top: 75%;
@@ -279,17 +265,17 @@
 }
 
 @keyframes squash {
-    0% { transform: translate(0, -150%);}
-    1% {transform: translate(0, -150%) scale(0.8,1.2);}
-    2% {transform: translate(0, -150%) scale(1.2,0.8);}
+    0% { transform: translate(0, -140%);}
+    1% {transform: translate(0, -140%) scale(0.8,1.2);}
+    2% {transform: translate(0, -140%) scale(1);}
     25% { transform: translate(150%, 0);}
     26% {transform: translate(150%, 0) scale(1.2,0.8);}
-    27% {transform: translate(150%, 0) scale(0.8,1.2);}
-    50% { transform: translate(0, 150%);}
-    51% {transform: translate(0, 150%) scale(0.8,1.2);}
-    52% {transform: translate(0, 150%) scale(1.2,0.8);}
+    27% {transform: translate(150%, 0) scale(1);}
+    50% { transform: translate(0, 140%);}
+    51% {transform: translate(0, 140%) scale(0.8,1.2);}
+    52% {transform: translate(0, 140%) scale(1);}
     75% { transform: translate(-150%, 0);}
     76% {transform: translate(-150%, 0) scale(1.2,0.8);}
-    77% {transform: translate(-150%, 0) scale(0.8,1.2);}
-    100% { transform: translate(0, -150%);}
+    77% {transform: translate(-150%, 0) scale(1);}
+    100% { transform: translate(0, -140%);}
 }
